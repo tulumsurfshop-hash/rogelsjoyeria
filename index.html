@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="facebook-domain-verification" content="4v4cquqfp8hqgaf2w1gwnvlldctk6l" />
+    <title>Rogels Joyeria - Joyas Exclusivas y Elegantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #8B4513, #CD853F, #DAA520);
+            color: white;
+            padding: 20px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+        header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: sparkle 20s infinite linear;
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+
+        .header-content {
+            text-align: center;
+      position: relative;
+      z-index: 2;
+            padding: 80px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(139, 69, 19, 0.95);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(218, 165, 32, 0.3);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #DAA520;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8B4513;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 40px;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .experience-highlight {
+            background: linear-gradient(45deg, #DAA520, #CD853F);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3);
+        }
+
+        .experience-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 10px;
+            border-left: 5px solid #DAA520;
+            transition: all 0.3s ease;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8B4513;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+      position: relative;
+            padding-left: 20px;
+        }
+
+        .service-list li:before {
+            content: "✦";
+            color: #DAA520;
+            font-weight: bold;
+      position: absolute;
+            left: 0;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Three Column Services Layout */
+        .services-overview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .service-overview-card {
+            background: linear-gradient(45deg, #8B4513, #CD853F);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(218, 165, 32, 0.2);
+        }
+
+        .service-overview-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #DAA520;
+        }
+
+        .service-overview-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .service-overview-card li {
+            padding: 5px 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #DAA520;
+        }
+
+        .team-member h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+
+        .team-member .position {
+            color: #DAA520;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member .quote {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(45deg, #8B4513, #CD853F);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: #DAA520;
+        }
+
+        .contact-item {
+      display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .contact-item i {
+            color: #DAA520;
+            margin-right: 15px;
+            margin-top: 3px;
+            width: 20px;
+        }
+
+        .contact-item span {
+            line-height: 1.6;
+        }
+
+        .business-hours {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .business-hours h4 {
+            color: #DAA520;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .business-hours p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .business-hours strong {
+            color: #DAA520;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-overview {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                padding: 40px 0;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Additional styling to match rooming theme */
+        .highlight-text {
+            color: #DAA520;
+            font-weight: 600;
+        }
+        
+        /* Jewelry Gallery Styles */
+        .jewelry-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(218, 165, 32, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(139, 69, 19, 0.9), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #DAA520;
+        }
+        
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .mission-section {
+            background: linear-gradient(45deg, #DAA520, #CD853F);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3);
+        }
+
+        .mission-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive WhatsApp button */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">ROGELS JOYERÍA</h1>
+                <p class="logo-subtitle">Joyas Exclusivas y Elegantes</p>
+                <p class="tagline">Descubre la belleza y elegancia en cada pieza. Ofrecemos las mejores joyas con diseños únicos y la más alta calidad en Mar del Plata.</p>
+      </div>
+    </div>
+  </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#collections">Colecciones</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            <div class="about-content">
+                <div>
+                    <p class="about-text">
+                        Somos una joyería especializada en piezas exclusivas y elegantes en Mar del Plata. Ofrecemos una amplia selección de joyas de la más alta calidad, desde anillos de compromiso únicos hasta collares y pulseras que destacan por su belleza y artesanía excepcional.
+                    </p>
+                    <p class="about-text">
+                        Contamos con años de experiencia en el diseño y venta de joyas finas. Nuestro equipo de expertos se dedica a ayudarte a encontrar la pieza perfecta para cada ocasión especial, garantizando autenticidad y calidad en cada compra.
+                    </p>
+                </div>
+                <div>
+                    <div class="experience-highlight">
+                        <h3>Calidad Premium</h3>
+              </div>
+                    <p class="about-text">
+                        Ofrecemos servicios integrales a través de nuestro <strong class="highlight-text">SISTEMA DE ATENCIÓN PERSONALIZADA</strong> para todas tus necesidades en joyería. Somos referentes en elegancia y calidad en Mar del Plata.
+                    </p>
+                    <div class="mission-section">
+                        <h3>Nuestra Misión</h3>
+                        <p>Brindar las joyas más hermosas y de mejor calidad al mejor precio posible, sin comprometer la elegancia, autenticidad y satisfacción de nuestros clientes</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Colecciones</h2>
+            <p class="section-subtitle">Descubre la joya perfecta para cada momento especial</p>
+
+            <!-- Three Column Overview -->
+            <div class="services-overview">
+                <div class="service-overview-card">
+                    <h4>Anillos y Sortijas</h4>
+                    <ul>
+                        <li>Anillos de compromiso únicos</li>
+                        <li>Alianzas de matrimonio</li>
+                        <li>Sortijas con piedras preciosas</li>
+                        <li>Diseños clásicos y modernos</li>
+                        <li>Oro blanco, amarillo y rosa</li>
+                    </ul>
+              </div>
+                <div class="service-overview-card">
+                    <h4>Collares y Cadenas</h4>
+                    <ul>
+                        <li>Collares con diamantes</li>
+                        <li>Cadenas de oro y plata</li>
+                        <li>Dijes y colgantes únicos</li>
+                        <li>Perlas naturales y cultivadas</li>
+                        <li>Diseños personalizados</li>
+                    </ul>
+            </div>
+                <div class="service-overview-card">
+                    <h4>Pulseras y Relojes</h4>
+                    <ul>
+                        <li>Pulseras de oro y plata</li>
+                        <li>Relojes de lujo</li>
+                        <li>Brazaletes con gemas</li>
+                        <li>Diseños elegantes y sofisticados</li>
+                        <li>Piezas de colección exclusivas</li>
+                    </ul>
+          </div>
+      </div>
+      
+            <!-- Gallery Section -->
+            <div class="jewelry-gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" alt="Anillos de compromiso elegantes">
+                    <div class="gallery-overlay">
+                        <h4>Anillos de Compromiso</h4>
+                        <p>Diseños únicos para momentos únicos</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop" alt="Collares con diamantes">
+                    <div class="gallery-overlay">
+                        <h4>Collares Premium</h4>
+                        <p>Elegancia que destaca</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" alt="Pulseras de oro">
+                    <div class="gallery-overlay">
+                        <h4>Pulseras de Lujo</h4>
+                        <p>Sofisticación en cada detalle</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop" alt="Relojes elegantes">
+                    <div class="gallery-overlay">
+                        <h4>Relojes Exclusivos</h4>
+                        <p>Tiempo y estilo en perfecta armonía</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" alt="Aretes con gemas">
+                    <div class="gallery-overlay">
+                        <h4>Aretes con Gemas</h4>
+                        <p>Brillo que ilumina tu rostro</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=400&fit=crop" alt="Joyas personalizadas">
+                    <div class="gallery-overlay">
+                        <h4>Diseños Personalizados</h4>
+                        <p>Tu estilo, nuestra creación</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Venta de Joyas Premium</h3>
+                    <p>Ofrecemos una amplia selección de joyas de la más alta calidad para satisfacer todos los gustos y ocasiones especiales:</p>
+                    <ul class="service-list">
+                        <li>Anillos de compromiso con diamantes certificados</li>
+                        <li>Alianzas de matrimonio en oro y platino</li>
+                        <li>Collares y cadenas de diseño exclusivo</li>
+                        <li>Pulseras y brazaletes con gemas preciosas</li>
+                        <li>Aretes y pendientes de lujo</li>
+                        <li>Relojes de marcas reconocidas</li>
+                        <li>Joyas con perlas naturales</li>
+                        <li>Piezas vintage y de colección</li>
+                        <li>Certificados de autenticidad incluidos</li>
+                        <li>Garantía de calidad en todas las piezas</li>
+                        <li>Asesoramiento personalizado</li>
+                    </ul>
+          </div>
+          
+                <div class="service-card">
+                    <h3>Servicios Especializados</h3>
+                    <p>Brindamos servicios profesionales para el cuidado y personalización de tus joyas más preciadas:</p>
+                    <ul class="service-list">
+                        <li>Reparación y restauración de joyas</li>
+                        <li>Limpieza y pulido profesional</li>
+                        <li>Engaste de piedras preciosas</li>
+                        <li>Redimensionado de anillos</li>
+                        <li>Grabados personalizados</li>
+                        <li>Tasaciones y certificaciones</li>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Asesoramiento en inversión</li>
+                    </ul>
+          </div>
+          
+                <div class="service-card">
+                    <h3>Diseño Personalizado</h3>
+                    <p>Creamos piezas únicas y exclusivas adaptadas a tus gustos y necesidades específicas:</p>
+                    <ul class="service-list">
+                        <li>Consulta de diseño personalizada</li>
+                        <li>Bocetos y renderizados 3D</li>
+                        <li>Selección de materiales premium</li>
+                        <li>Fabricación artesanal</li>
+                        <li>Seguimiento del proceso de creación</li>
+                        <li>Modificaciones durante el diseño</li>
+                        <li>Entrega con estuche de lujo</li>
+                        <li>Garantía de por vida</li>
+                    </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Experiencia y calidad en cada servicio que ofrecemos</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Venta de Joyas</h3>
+                    <p>Amplia selección de joyas premium con certificado de autenticidad y garantía de calidad.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparaciones</h3>
+                    <p>Servicio técnico especializado para restaurar y mantener tus joyas en perfecto estado.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Diseño Personalizado</h3>
+                    <p>Creamos piezas únicas según tus especificaciones y gustos personales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo de Expertos</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="María González">
+                    <h4>María González</h4>
+                    <p class="position">Directora y Gemóloga</p>
+                    <p class="quote">"Cada joya cuenta una historia única. Nuestro compromiso es ayudarte a encontrar la pieza perfecta que refleje tu personalidad y estilo."</p>
+          </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Carlos Rodríguez">
+                    <h4>Carlos Rodríguez</h4>
+                    <p class="position">Maestro Joyero</p>
+                    <p class="quote">"La perfección se encuentra en los detalles. Cada pieza que creamos es trabajada con pasión y precisión artesanal."</p>
+            </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1ee?w=150&h=150&fit=crop&crop=face" alt="Ana Martínez">
+                    <h4>Ana Martínez</h4>
+                    <p class="position">Especialista en Diamantes</p>
+                    <p class="quote">"Los diamantes son eternos, al igual que los momentos especiales que representan. Te ayudo a elegir la gema perfecta."</p>
+            </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Diego Fernández">
+                    <h4>Diego Fernández</h4>
+                    <p class="position">Asesor de Ventas</p>
+                    <p class="quote">"Mi objetivo es brindarte una experiencia excepcional, desde la selección hasta la entrega de tu joya soñada."</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">¿Tienes alguna consulta sobre nuestras joyas?</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ubicación de Nuestra Joyería</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>España 2247, Mar Del Plata</span>
+        </div>
+        
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+5491125620402</span>
+            </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>rogelsjoyeria@gmail.com</span>
+          </div>
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>CUIL: 20959758299</span>
+          </div>
+        </div>
+        
+                <div class="contact-info">
+                    <div class="business-hours">
+                        <h4>Horarios de Atención</h4>
+                        <p><strong>Días de atención:</strong></p>
+                        <p>Lunes a Viernes: 9:00 a 19:00 hs</p>
+                        <p>Sábados: 9:00 a 16:00 hs</p>
+                        <br>
+                        <p><strong>Consultas y citas:</strong></p>
+                        <p>Disponible en horarios de atención</p>
+                        <p>WhatsApp: +5491125620402</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rogels Joyería. Todos los derechos reservados</p>
+            <p>Joyas exclusivas y elegantes en Mar del Plata</p>
+    </div>
+  </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scrolling effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(30, 58, 138, 0.98)';
+            } else {
+                nav.style.background = 'rgba(30, 58, 138, 0.95)';
+            }
+        });
+    </script>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491125620402?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20joyas%20y%20servicios" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
